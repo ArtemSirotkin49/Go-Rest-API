@@ -203,5 +203,5 @@ func main() {
 	subrouter.HandleFunc("/refresh-tokens", refreshTokensHandler).Methods("POST")
 	subrouter.HandleFunc("/delete-token", deleteTokenHandler).Methods("POST")
 	subrouter.HandleFunc("/delete-all-tokens", deleteAllTokensHandler).Methods("POST")
-	log.Fatal(http.ListenAndServe(port, router))
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
